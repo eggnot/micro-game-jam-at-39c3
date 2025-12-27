@@ -96,3 +96,4 @@ unique_name_in_owner = true
 [connection signal="continue_btn_pressed" from="MenuLayer/PauseMenu" to="." method="resume"]
 [connection signal="exit_game_btn_pressed" from="MenuLayer/PauseMenu" to="." method="_quit_game"]
 [connection signal="exit_to_main_menu_btn_pressed" from="MenuLayer/PauseMenu" to="." method="_return_to_title_screen"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

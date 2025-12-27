@@ -29,7 +29,6 @@ func _ready() -> void:
 	for i in range(0, max_health):
 		$MenuLayer/GameUI/HeartsContainer.add_child(HEART.instantiate())
 	
-	
 	Global.set_game_manager(self)
 	DebugGlobal.debug_label = %DebugLabel
 	
@@ -51,7 +50,7 @@ func _start_game() -> void:
 	_show_controls()
 
 func _process(_delta: float) -> void:
-	%TimerLabel.text = str(round(%Timer.time_left * 10)/10)
+	%TimerLabel.text = str(round(%Timer.time_left * 10) / 10)
 	#%HealthLabel.text = str(health)
 
 #region Pausing
@@ -97,13 +96,13 @@ func _lose_level() -> void:
 	print("Lose")
 	%Timer.stop()
 	health = health - 1
+	if current_level_node:
+		current_level_node.queue_free()
+		current_level_node = null
 	if health == 0:
 		_show_lose_screen()
 	else:
 		_next_level()
-	if current_level_node: 
-		current_level_node.queue_free()
-		current_level_node = null
 
 #endregion
 
@@ -163,3 +162,6 @@ func _quit_game() -> void:
 	
 func set_world_environment(env: Environment):
 	$WorldEnvironment.environment = env
+
+func _on_timer_timeout() -> void:
+	_lose_level()

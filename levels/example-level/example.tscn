@@ -13,7 +13,7 @@ font_color = Color(1, 0.3254902, 0.25490198, 1)
 
 [node name="Example" type="Node"]
 script = ExtResource("1_4xgwq")
-timeout = 3.0
+timeout = 5.0
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 14

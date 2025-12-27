@@ -1,6 +1,49 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://hheneshfv1b2"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://hheneshfv1b2"]
 
 [ext_resource type="Texture2D" uid="uid://b23e4kqj4o6dv" path="res://textures/Revert.svg" id="1_r1020"]
+[ext_resource type="FontFile" uid="uid://buuct0rog8400" path="res://ui/themes/Kario39C3Var-Roman.ttf" id="2_ge066"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ge066"]
+content_margin_top = 6.0
+content_margin_bottom = 6.0
+bg_color = Color(0, 0.18310085, 0.0008032782, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.92, 0.92, 0.92, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c2y3n"]
+content_margin_top = 6.0
+content_margin_bottom = 6.0
+bg_color = Color(0, 0.18310085, 0.0008032782, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0.91764706, 0.023529412, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_prsbj"]
+content_margin_top = 6.0
+content_margin_bottom = 6.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0.91764706, 0.023529412, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0d4dl"]
 content_margin_left = 8.0
@@ -14,6 +57,10 @@ corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 
 [resource]
+default_font = ExtResource("2_ge066")
+Button/styles/hover = SubResource("StyleBoxFlat_ge066")
+Button/styles/normal = SubResource("StyleBoxFlat_c2y3n")
+Button/styles/pressed = SubResource("StyleBoxFlat_prsbj")
 HeaderLarge/font_sizes/font_size = 56
 HeaderMedium/font_sizes/font_size = 24
 MarginContainer/constants/margin_bottom = 8

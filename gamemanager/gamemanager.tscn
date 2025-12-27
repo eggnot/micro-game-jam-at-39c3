@@ -11,6 +11,7 @@
 font_size = 32
 outline_size = 8
 outline_color = Color(0.21568628, 0.19215687, 0.19215687, 1)
+shadow_size = 0
 
 [node name="Gamemanager" type="Node"]
 process_mode = 3
@@ -47,14 +48,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme = ExtResource("3_8qpx4")
 
 [node name="TimeUI" type="HBoxContainer" parent="MenuLayer/GameUI"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -102.0
-offset_bottom = 32.0
+offset_left = -112.0
+offset_top = 8.0
+offset_right = -10.0
+offset_bottom = 40.0
 grow_horizontal = 0
 alignment = 2
 
@@ -66,8 +70,10 @@ text = "Time:"
 [node name="TimerLabel" type="Label" parent="MenuLayer/GameUI/TimeUI"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_vertical = 1
 text = "9"
 label_settings = SubResource("LabelSettings_3c0xs")
+vertical_alignment = 2
 
 [node name="ClockIcon" type="TextureRect" parent="MenuLayer/GameUI/TimeUI"]
 texture_filter = 1
@@ -78,10 +84,10 @@ stretch_mode = 5
 
 [node name="HeartsContainer" type="HBoxContainer" parent="MenuLayer/GameUI"]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 5.0
-offset_right = 99.0
-offset_bottom = 35.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 102.0
+offset_bottom = 38.0
 theme_override_constants/separation = 2
 
 [node name="Timer" type="Timer" parent="."]

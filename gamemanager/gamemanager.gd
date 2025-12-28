@@ -115,7 +115,6 @@ func _lose_level() -> void:
 
 
 func _show_lose_screen() -> void:
-	print(level)
 	InputManager.set_is_in_game(false)
 	var win_screen: Control = load("res://ui/screens/win-screen/win_screen.tscn").instantiate()
 	win_screen.tree_exited.connect(_show_title_screen)
